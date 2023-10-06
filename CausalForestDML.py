@@ -172,7 +172,7 @@ Y_01.shape, X_01.shape, T_01.shape
 # In[13]:
 
 
-# params_XT01 = bayesGridSearchCVParams(X_01, T_01, objective='binary', scoring='roc_auc_ovr_weighted') 
+# params_XT01 = bayesGridSearchCVParams(X_01, T_01, objective='binary', scoring='roc_auc') 
 params_XT01 = {'boosting_type': 'gbdt', 'objective': 'binary', 'class_weight': 'balanced', 'n_jobs': -1, 'learning_rate': 0.03, 'min_child_samples': 7, 'n_estimators': 500, 'num_leaves': 7, 'reg_lambda': 0.05, 'seed': 42}
 mdl_t01 = lgb.LGBMClassifier(**params_XT01) 
 
@@ -284,7 +284,7 @@ Y_02.shape, X_02.shape, T_02.shape
 # In[21]:
 
 
-# params_XT02 = bayesGridSearchCVParams(X_02, T_02, objective='binary', scoring='roc_auc_ovr_weighted') 
+# params_XT02 = bayesGridSearchCVParams(X_02, T_02, objective='binary', scoring='roc_auc') 
 params_XT02 = {'boosting_type': 'gbdt', 'objective': 'binary', 'class_weight': 'balanced', 'n_jobs': -1, 'learning_rate': 0.010618497852749719, 'min_child_samples': 11, 'n_estimators': 500, 'num_leaves': 7, 'reg_lambda': 0.1, 'seed': 42}
 mdl_t02 = lgb.LGBMClassifier(**params_XT02) 
 
