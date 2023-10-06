@@ -107,7 +107,7 @@ def bayesGridSearchCVParams(X, Y, objective='regression'):
                       'reg_alpha': Real(0.0, 0.1),
                       'reg_lambda': Real(0, 0.1), 
                       'seed': Categorical([42])} 
-        scoring = 'roc_auc_ovr_weighted'
+        scoring = 'roc_auc'
     else:
         params = {'boosting_type': 'gbdt',  'n_jobs': -1}
         estimator = lgb.LGBMRegressor(**params) 
